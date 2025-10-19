@@ -1,0 +1,103 @@
+.navigation-bar {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+
+    padding: var(--gap-16) var(--gap-32);
+
+    > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+    }
+}
+
+.nav-left, .nav-right {
+    gap: var(--gap-32);
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: var(--gap-8);
+
+    img {
+        height: 50px;
+        width: auto;
+    }
+}
+
+
+.nav-links {
+    display: flex;
+    gap: var(--gap-32);
+
+    li {
+        list-style: none;
+
+        
+        font-family: 'Inria Sans', sans-serif;
+        font-size: var(--font-size-20);
+        color: var(--color-black);
+        text-decoration: none;
+        padding: var(--gap-6) var(--gap-12);
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: var(--color-blue-accent2);
+            transform: scale(1.02);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-size: var(--font-size-24);
+        }
+
+    }
+}
+
+.icons {
+    gap: var(--gap-16);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    img {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+input {
+    width: clamp(150px, 20vw, 300px);
+    padding: var(--gap-8) var(--gap-12);
+    font-size: var(--font-size-16);
+    border: 2px solid var(--color-grey-accent1);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border-color: var(--color-blue-accent1);
+    }
+}
