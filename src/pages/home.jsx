@@ -39,7 +39,7 @@ function Home() {
             <img
               src={product.image}
               alt={product.title}
-              style={{height: '200px', objectFit: 'cover' }}
+              style={{height: '150px', objectFit: 'cover' }}
             />
           </div>
         ))}

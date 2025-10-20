@@ -16,8 +16,8 @@ function NavigationBar() {
                     <h2>GREEN.</h2>
                 </div>
                 <ul className="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><NavButton text="Store" to="/shop" /></li>
+                    <li><NavButton text="Home" to="home" /></li>
+                    <li><NavButton text="Store" to="shop" /></li>
                 </ul>
             </div>
 

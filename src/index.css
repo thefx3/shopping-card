@@ -19,12 +19,12 @@
 
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-blue-accent1: rgb(0, 134, 22);
-  --color-blue-accent2: rgba(0, 133, 33, 0.521);
-  --color-dark-accent0: rgba(14, 9, 7, 1);
-  --color-dark-accent1: rgba(23, 18, 16, 1);
-  --color-dark-accent2: rgb(48, 63, 51);
-  --color-grey-accent1: rgba(174, 174, 174, 1);
+  --color-primary1: #2e5d56;
+  --color-primary2: #00965b;
+  --color-secondary1: #13a98f;
+  --color-secondary2: #00c69e;
+  --color-dark: #001520;
+  --color-clair: #00cdcc;
 
   --border-padding: 2vh 16vw; /* to change */
 
