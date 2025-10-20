@@ -1,0 +1,32 @@
+img.banner {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 300px;
+}
+
+.store-page {
+    display: flex;
+    flex-direction: row;
+    padding: var(--gap-32);  
+    width: 100%;
+}
+
+.store-products {
+    flex:1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--color-primary2);
+
+}

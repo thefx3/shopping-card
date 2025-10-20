@@ -27,8 +27,8 @@ function Home() {
   return (
     <div className="home-page">
       <div className="home-title">
-        <Space height="1vh" />
-        <h1>WELCOME TO THE GREEN STORE</h1>
+        <Space height="100px" />
+        <h1>WELCOME TO THE AUTOMN STORE</h1>
         <p>Discover something fresh & new.</p>
       </div>
 
@@ -45,7 +45,7 @@ function Home() {
         ))}
       </div>
       <Space height="1vh" />
-      <DirectButton text="SHOP NOW" to="/shop" />
+      <DirectButton text="SHOP NOW" to="/store" />
     </div>
   );
 }

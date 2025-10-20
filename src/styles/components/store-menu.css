@@ -1,0 +1,11 @@
+.store-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.explore {
+    font-size: var(--font-size-48);
+    font-weight: 800;
+}

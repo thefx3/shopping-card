@@ -13,11 +13,11 @@ function NavigationBar() {
             <div className="nav-left">
                 <div className="logo">
                     <img src={logo} alt="Logo" />
-                    <h2>GREEN.</h2>
+                    <h2>AUTOMN.</h2>
                 </div>
                 <ul className="nav-links">
                     <li><NavButton text="Home" to="home" /></li>
-                    <li><NavButton text="Store" to="shop" /></li>
+                    <li><NavButton text="Store" to="/store" /></li>
                 </ul>
             </div>
 

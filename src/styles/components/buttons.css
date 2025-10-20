@@ -5,7 +5,7 @@
     font-size: var(--font-size-24);
     font-weight: bold;
     background-color: var(--color-dark);
-    padding : var(--gap-16) var(--gap-32);
+    padding : 12px 24px;
     border-radius: 18px;
     transition: transform 0.3 ease background-color 0.3 ease;
 

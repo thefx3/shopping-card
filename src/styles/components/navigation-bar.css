@@ -8,7 +8,7 @@
     justify-items: center;
     text-align: center;
     align-items: center;
-    background-color: transparent;
+    background-color: var(--color-clair);
 
     padding: var(--gap-16) var(--gap-32);
 
