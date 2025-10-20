@@ -22,7 +22,7 @@
 }
 
 .nav-left, .nav-right {
-    gap: var(--gap-32);
+    gap: var(--gap-40);
     align-items: center;
 }
 
@@ -33,7 +33,7 @@
     gap: var(--gap-8);
 
     img {
-        height: 50px;
+        height: 40px;
         width: auto;
     }
 }
@@ -42,6 +42,7 @@
 .nav-links {
     display: flex;
     gap: var(--gap-32);
+    font-weight: bold;
 
     li {
         list-style: none;
@@ -53,11 +54,11 @@
         text-decoration: none;
         padding: var(--gap-6) var(--gap-12);
         border-radius: var(--border-radius);
-        transition: background-color 0.3s ease, transform 0.3s ease;
+        transition: transform 0.3s ease;
 
         &:hover {
-            background-color: var(--color-blue-accent2);
             transform: scale(1.02);
+            color: var(--color-blue-accent1);
         }
 
         a {
@@ -70,6 +71,7 @@
 }
 
 .icons {
+    display: flex;
     gap: var(--gap-16);
     justify-content: center;
     align-items: center;
@@ -77,8 +79,26 @@
     align-content: center;
 
     img {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.search-bar {
+    display: flex;
+    gap: var(--gap-8);
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 20px;
+        width: 20px;
         cursor: pointer;
         transition: transform 0.3s ease;
 
@@ -90,7 +110,7 @@
 
 input {
     width: clamp(150px, 20vw, 300px);
-    padding: var(--gap-8) var(--gap-12);
+    padding: 8px 12px;
     font-size: var(--font-size-16);
     border: 2px solid var(--color-grey-accent1);
     border-radius: var(--border-radius);
@@ -101,3 +121,4 @@ input {
         border-color: var(--color-blue-accent1);
     }
 }
+

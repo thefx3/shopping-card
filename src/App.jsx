@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom/client';
 import './components/navigation-bar';
 import './App.css';
 import NavigationBar from './components/navigation-bar';
+import Home from '../src/pages/home';
+import Space from './components/space';
 
 function App() {
 
@@ -12,8 +14,8 @@ function App() {
     <Router>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/about" element={<div>About Page</div>} />
+        
+        <Route path="/" element={ <Home /> } />
       </Routes>
     </Router>
 

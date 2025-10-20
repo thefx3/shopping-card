@@ -3,6 +3,8 @@ import logo from '../images/logo.png';
 import heart from '../images/heart.png';
 import cart from '../images/cart.png';
 import user from '../images/user.png';
+import search from '../images/search.png';
+import { NavButton }  from './buttons';
 function NavigationBar() {
 
     return (
@@ -15,14 +17,14 @@ function NavigationBar() {
                 </div>
                 <ul className="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#store">Store</a></li>
+                    <li><NavButton text="Store" to="/shop" /></li>
                 </ul>
             </div>
 
             <div className="nav-right">
                 <div className="search-bar">
                     <input type="text" placeholder="Search..." />
-                    <button>🔍</button>
+                    <img src= {search} alt="Search" />
                 </div>
                 <div className='icons'>
                     <img src={heart} alt='Wishlist' />
