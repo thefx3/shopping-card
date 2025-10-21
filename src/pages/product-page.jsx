@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 function ProductPage() {
   const { productId } = useParams(); // 🔥 récupère l'ID de l'URL
   const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState();
 
   useEffect(() => {
     async function fetchProduct() {
@@ -37,14 +39,18 @@ function ProductPage() {
           </div>
 
           <div className="container-to-buy">
+           
             <div className='quantity'>
-              <p className="price">{product.price} €</p>
+              <p className="price">{product.price.toFixed(1)*quantity}€</p>
+
               <div className="quantity-button">
-                <button className='left'>-</button>
-                <p>1</p>
-                <button className='right'>+</button>
+                <button className='left' onClick={() => setQuantity((q) => Math.max(1, q - 1))}>-</button>
+                  <p className='qty'>{quantity}</p>
+                <button className='right' onClick={() => setQuantity((q) => q + 1)}>+</button> 
               </div>
             </div>
+
+
             <div className='container-buttons'>
               <button className='add-to-cart'> ADD TO CART </button>
               <button className='shop-now'> SHOP NOW </button>
