@@ -1,0 +1,36 @@
+.custom-slider {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: var(--color-clair);
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .slider-track {
+    position: absolute;
+    height: 6px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background 0.15s ease;
+  }
+  
+  .slider-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: var(--color-secondary2);
+    border-radius: 50%;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .slider-thumb.dragging {
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+  

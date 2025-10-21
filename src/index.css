@@ -18,13 +18,13 @@
 
 
   --color-black: #000000;
-  --color-white: #ffffff;
-  --color-primary1: #2e5d56;
-  --color-primary2: #00965b;
-  --color-secondary1: #13a98f;
-  --color-secondary2: #00c69e;
-  --color-dark: #001520;
-  --color-clair: #00cdcc;
+  --color-white: #f8fffe;
+  --color-primary1: #f96e44;
+  --color-primary2: #e20045;
+  --color-secondary1: #a42a53;
+  --color-secondary2: #6f0f35;
+  --color-dark: #52022c;
+  --color-clair: #ff7d551f;
 
   --border-padding: 2vh 16vw; /* to change */
 

@@ -44,20 +44,31 @@ function Store() {
     <div className='container'>
       <img className='banner' src={sun} alt="automn" />
 
+      <p className="explore">Explore</p>
+
       <div className="store-page">
+
           <StoreMenu onFilterChange={handleFilterChange} />
 
-          <div className="store-products">
-            {filteredProducts.map((p) => (
-              <div className="product" key={p.id}>
-                <img src={p.image} alt={p.title} width="100" />
-                <p>{p.title}</p>
-                <p>{p.price} €</p>
-                <p>⭐ {p.rating.rate}</p>
-                <p>{p.rating.count} avis</p>
+          <div className="store-products-container">
+              <div className='products-filters'>
+                <p className='sort-by'>Sort by :  </p>
+                <button className='dropdown'>Filter</button>
               </div>
-            ))}
+
+            <div className="store-products">
+                {filteredProducts.map((p) => (
+                  <div className="product" key={p.id}>
+                    <img src={p.image} alt={p.title} width="100" />
+                    <p>{p.title}</p>
+                    <p>{p.price} €</p>
+                    <p>⭐ {p.rating.rate}</p>
+                    <p>{p.rating.count} avis</p>
+                  </div>
+                ))}
+              </div>
           </div>
+
       </div>
 
     </div>
