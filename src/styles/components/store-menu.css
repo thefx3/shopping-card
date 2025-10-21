@@ -34,6 +34,10 @@
         background-color: var(--color-clair);
     }
 
+    h3 {
+        font-size: var(--font-size-24);
+    }
+
 }
 
 .dropdown-menu {

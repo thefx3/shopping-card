@@ -60,22 +60,77 @@ img.banner {
 }
 
 .store-products {
-    flex:1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    max-height: 250px;
-}
-
-.product {
-    flex: 1;
+    width: 100%;
+  }
+  
+  /* Chaque carte produit */
+  .product {
+    display: grid;
+    grid-template-rows: 1fr auto auto; /* image - titre - infos */
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary1);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  
+  .product:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    background-color: var(--color-white);
+  }
+  
+  /* 🖼️ Image produit */
+  .product img {
+    width: 100%;
+    height: 100%;
+    max-height: 150px; /* pour que ça prenne la moitié environ */
+    object-fit: contain; /* pour garder les proportions */
+    justify-self: center;
+    align-self: start;
+  }
+  
+  /* 🏷️ Titre produit */
+  .product .title {
+    text-align: center;
+    font-size: var(--font-size-24);
+    font-weight: 600;
+    padding: 8px 4px;
+    line-height: 1.2;
+    align-self: center;
+  }
+  
+  /* 📊 Bloc des lignes (prix + rating) */
+  .lines {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: end; /* ancré en bas */
+    gap: 5px;
+    height: 100%;
+  }
+  
+  .line-1,
+  .line-2 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    border: 1px solid var(--color-primary1);
-    border-radius: 8px;
-    padding: 12px 12px;
-}
+    font-size: var(--font-size-20);
+    color: var(--color-black);
+  }
+  
+  .line-1 img {
+    width: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .line-1 img:hover {
+    transform: scale(1.05);
+  }
+  
+  .line-1 p, .line-2 p {
+    font-size: var(--font-size-20);
+  }

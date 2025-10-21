@@ -1,9 +1,9 @@
 import '../styles/pages/store-page.css';
-
 import { useState, useEffect } from "react";
-import Space from '../components/space'
+import { Link } from "react-router-dom";
 import StoreMenu from "../components/store-menu";
 import sun from '../images/automn.jpg'
+import heart from '../images/heart.png'
 
 function Store() {
   const [filters, setFilters] = useState({
@@ -13,7 +13,7 @@ function Store() {
   });
   const [products, setProducts] = useState([]);
 
-  // Récupère tous les produits
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -21,12 +21,12 @@ function Store() {
       .catch((err) => console.error("Error fetching products:", err));
   }, []);
 
-  // Fonction appelée quand les sliders changent
+ 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
   };
 
-  // Filtrage des produits
+  
   const filteredProducts = products.filter((p) => {
     const { priceRange, ratingRange, ratingCountRange } = filters;
     return (
@@ -56,15 +56,34 @@ function Store() {
                 <button className='dropdown'>Filter</button>
               </div>
 
-            <div className="store-products">
+            <div className="store-products" >
                 {filteredProducts.map((p) => (
-                  <div className="product" key={p.id}>
-                    <img src={p.image} alt={p.title} width="100" />
-                    <p>{p.title}</p>
-                    <p>{p.price} €</p>
-                    <p>⭐ {p.rating.rate}</p>
-                    <p>{p.rating.count} avis</p>
-                  </div>
+                    <Link
+                      key={p.id}
+                      to={`/store/${p.id}`} // ✅ redirige vers /store/ID
+                      className="product"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+
+                    <div className="img-container">
+                      <img className="product-img" src={p.image} alt={p.title} width="100" />
+                    </div>
+
+                    <div className="lines">
+                      <p className='product-title'>{p.title}</p>
+
+                      <div className="line-1">
+                        <p>{p.price} €</p>
+                        <img src={heart} alt="favorites" />
+                      </div>
+                      <div className="line-2">
+                        <p>⭐ {p.rating.rate}</p>
+                        <p>{p.rating.count} ratings</p>
+                      </div>
+                    </div>
+
+                  </Link>
+
                 ))}
               </div>
           </div>

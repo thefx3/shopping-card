@@ -46,7 +46,7 @@ function StoreMenu({ onFilterChange }) {
 
         <div className="filter categories">
           <div className="dropdown-menu">
-            <h3>Catégories</h3>
+            <h3>Categories</h3>
             <button className="dropdown">u</button>
           </div>
 
