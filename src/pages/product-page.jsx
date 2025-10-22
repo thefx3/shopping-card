@@ -1,11 +1,15 @@
 import '../styles/pages/product-page.css'
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useCart } from '../CartContext'
+import { useNavigate } from 'react-router-dom';
+
 function ProductPage() {
   const { productId } = useParams(); // 🔥 récupère l'ID de l'URL
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [price, setPrice] = useState();
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchProduct() {
@@ -52,8 +56,17 @@ function ProductPage() {
 
 
             <div className='container-buttons'>
-              <button className='add-to-cart'> ADD TO CART </button>
-              <button className='shop-now'> SHOP NOW </button>
+              <button className='add-to-cart'
+                      onClick={() => addToCart(product, quantity)}
+              > ADD TO CART
+              </button>
+              <button className='shop-now'
+                      onClick={() => {
+                        addToCart(product, quantity); 
+                        navigate("/cart");
+                      }}
+              > SHOP NOW 
+              </button>
             </div>
           </div>
 

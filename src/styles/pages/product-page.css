@@ -109,6 +109,10 @@
         color: var(--color-white);
         transform: scale(1.05);
     }
+
+    &:active {
+        transform: scale(0.98);
+    }
 }
 
 .shop-now {
@@ -119,5 +123,9 @@
     &:hover {
         background-color: var(--color-secondary2);
         transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.98);
     }
 }

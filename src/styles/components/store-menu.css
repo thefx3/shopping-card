@@ -38,6 +38,11 @@
         font-size: var(--font-size-24);
     }
 
+    p { 
+        font-size: var(--font-size-24);
+        font-weight: 400;
+    }
+
 }
 
 .dropdown-menu {

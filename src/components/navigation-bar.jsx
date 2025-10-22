@@ -5,7 +5,13 @@ import cart from '../images/cart.png';
 import user from '../images/user.png';
 import search from '../images/search.png';
 import { NavButton }  from './buttons';
+import { Link } from 'react-router-dom';
+import { useCart } from '../CartContext';
+import { ShoppingCart, Heart } from 'lucide-react';
+import { User } from 'lucide-react';
+
 function NavigationBar() {
+    const { cartCount } = useCart();
 
     return (
         <nav className="navigation-bar">
@@ -27,9 +33,14 @@ function NavigationBar() {
                     <img src= {search} alt="Search" />
                 </div>
                 <div className='icons'>
-                    <img src={heart} alt='Wishlist' />
-                    <img src={cart} alt='Cart' />
-                    <img src={user} alt='User Account' />
+                    <Heart size={28} />
+                    <Link to="/cart" className='cart-icon-wrapper'>
+                        <ShoppingCart size={28} />
+                        {cartCount > 0 && (
+                        <span className="cart-badge">{cartCount}</span>
+                        )}
+                    </Link>
+                    <User size={28} />
                 </div>
             </div>
         </nav>
