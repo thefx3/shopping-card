@@ -4,6 +4,8 @@
     justify-content: start;
     align-items: start;
     gap: 20px;
+
+    width: 100%;
 }
 
 
@@ -14,6 +16,7 @@
     border-radius: 10px;
     padding: var(--gap-12) var(--gap-4) var(--gap-4);
     gap: var(--gap-4);
+    width: 100%;
 }
 
 .filter-title {
@@ -29,6 +32,7 @@
     border-radius: 10px;
     padding: var(--gap-12) var(--gap-12);
     gap: var(--gap-12);
+    border-bottom: 1px solid #ddd;
 
     input {
         background-color: var(--color-clair);
@@ -45,22 +49,24 @@
 
 }
 
+
 .dropdown-menu {
-    display: flex; 
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-
-    button {
-        appearance: none;
-        background-color: transparent;
-        border: none;
-        transition: all 0.3 ease;
-
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.02);
-        }
-    }
-}
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .dropdown-menu h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  .filter-content {
+    margin-top: 10px;
+    animation: slideDown 0.25s ease;
+  }
 
 .slider-group input[type="range"] {
     -webkit-appearance: none; /* enlève le style natif */
@@ -83,4 +89,34 @@
     background: var(--color-black);
     cursor: pointer;
 
+  }
+
+
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* UX simple pour le hover */
+  .dropdown-menu:hover {
+    color: var(--color-primary1);
+  }
+  
+  .category p {
+    padding: 4px 0;
+    margin: 0;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
